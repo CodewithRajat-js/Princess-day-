@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Princess Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="high-contrast-toggle">
+      <label>
+        <input type="checkbox" id="contrastToggle" aria-label="Toggle high contrast mode" />
+        <span>High Contrast</span>
+      </label>
+    </div>
+
+    <header class="site-header">
+      <nav aria-label="Primary">
+        <a href="#hero">Home</a>
+        <a href="#gallery">Memories</a>
+        <a href="#message">Love Note</a>
+        <a href="#surprise">Surprise</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero" aria-labelledby="heroTitle">
+        <div class="hero-floating-hearts" aria-hidden="true">
+          <span class="heart heart-1"></span>
+          <span class="heart heart-2"></span>
+          <span class="heart heart-3"></span>
+          <span class="heart heart-4"></span>
+          <span class="heart heart-5"></span>
+        </div>
+        <div class="hero-confetti" aria-hidden="true"></div>
+        <div class="hero-content">
+          <img
+            id="heroPhoto"
+            src="hero.jpg"
+            alt="Placeholder portrait for Pahal, replace with hero photo"
+            width="600"
+            height="600"
+          />
+          <!-- Replace hero.jpg with a 600x600 portrait -->
+          <div class="hero-text">
+            <h1 id="heroTitle">Happy Princess Day, Lado Rani!</h1>
+            <p class="typed-line" aria-live="polite">
+              <span id="typedText"></span>
+              <span class="caret" aria-hidden="true">|</span>
+            </p>
+            <audio
+              id="backgroundAudio"
+              controls
+              autoplay
+              preload="auto"
+              playsinline
+              aria-label="Background music for Princess Day"
+            >
+              <source src="background-music.mp3" type="audio/mpeg" />
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery-section" aria-labelledby="galleryTitle">
+        <div class="section-heading">
+          <h2 id="galleryTitle">Magic Moments</h2>
+          <p>Photos that sparkle like you — click to see captions.</p>
+        </div>
+        <div class="gallery-grid">
+          <!-- Replace photoX.jpg placeholders with your own 800x600 images -->
+          <figure>
+            <img src="photo1.jpg" loading="lazy" alt="Placeholder romantic photo 1" data-caption="Humesha saath, meri jaan." />
+          </figure>
+          <figure>
+            <img src="photo2.jpg" loading="lazy" alt="Placeholder romantic photo 2" data-caption="Dil garden garden ho jata hai." />
+          </figure>
+          <figure>
+            <img src="photo3.jpg" loading="lazy" alt="Placeholder romantic photo 3" data-caption="Meri Lado Rani, sabse pyari." />
+          </figure>
+          <figure>
+            <img src="photo4.jpg" loading="lazy" alt="Placeholder romantic photo 4" data-caption="Ek hansi aur main fida." />
+          </figure>
+          <figure>
+            <img src="photo5.jpg" loading="lazy" alt="Placeholder romantic photo 5" data-caption="Tu hi meri khushi ka reason." />
+          </figure>
+          <figure>
+            <img src="photo6.jpg" loading="lazy" alt="Placeholder romantic photo 6" data-caption="Forever hum, promise!" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="message" class="message-section" aria-labelledby="messageTitle">
+        <div class="section-heading">
+          <h2 id="messageTitle">Dil Se Message</h2>
+          <p>Read it, feel it, let it hug your heart.</p>
+        </div>
+        <article class="message-card" aria-live="polite">
+          <p>
+            Pahal, teri muskaan mere liye sab kuch hai. Har pal tere saath special lagta hai. Happy Princess Day 
+            may your every dream come true. Love, Sonpari.
+          </p>
+          <blockquote class="quote">“You’re my princess — always and forever.”</blockquote>
+          <div class="card-actions">
+            <button id="speakMessage" class="pill-button" aria-label="Play message using text to speech">Play</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="surprise" class="surprise-section" aria-labelledby="surpriseTitle">
+        <div class="section-heading">
+          <h2 id="surpriseTitle">Hidden Surprise</h2>
+          <p>Tap the heart 3 times to unlock a secret.</p>
+        </div>
+        <button class="secret-heart" id="secretHeart" aria-label="Tap heart three times to reveal secret">
+          ♥
+        </button>
+        <p class="sr-only" id="heartInstructions">Tap the heart button three times to reveal the secret message.</p>
+        <div id="surpriseMessage" class="surprise-message" role="status" aria-live="polite"></div>
+        <div id="confettiContainer" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+      <button class="modal-close" id="modalClose" aria-label="Close gallery modal">&times;</button>
+      <button class="modal-nav prev" id="modalPrev" aria-label="Previous photo">&#8592;</button>
+      <img id="modalImage" src="" alt="Full-size gallery preview" />
+      <p id="modalCaption"></p>
+      <button class="modal-nav next" id="modalNext" aria-label="Next photo">&#8594;</button>
+    </div>
+
+    <footer class="site-footer">
+      <p>Made with ❤️ for Pahal — from Rajat</p>
+      
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
